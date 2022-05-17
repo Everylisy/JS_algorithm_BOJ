@@ -1,5 +1,5 @@
 let input = require("fs")
-  .readFileSync(__dirname + "/input.txt")
+  .readFileSync("/dev/stdin")
   .toString()
   .split("\n");
 const topNum = parseInt(input[0]);
