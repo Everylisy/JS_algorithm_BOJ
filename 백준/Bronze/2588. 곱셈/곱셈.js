@@ -1,10 +1,15 @@
 let input = require("fs")
-  .readFileSync("/dev/stdin")
+  .readFileSync(__dirname + "/input.txt")
   .toString()
   .split("\n");
-let topNum = input[0];
-let btmNum = input[1];
-console.log(topNum * btmNum[2]);
-console.log(topNum * btmNum[1]);
-console.log(topNum * btmNum[0]);
+const topNum = parseInt(input[0]);
+const btmNum = parseInt(input[1]);
+
+const oneNum = btmNum % 10;
+const tenNum = Math.floor((btmNum % 100) / 10);
+const hunNum = Math.floor((btmNum % 1000) / 100);
+
+console.log(topNum * oneNum);
+console.log(topNum * tenNum);
+console.log(topNum * hunNum);
 console.log(topNum * btmNum);
