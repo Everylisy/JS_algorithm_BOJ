@@ -5,11 +5,11 @@ const input = +require("fs")
 
 let star = "";
 
-for (let i = 0; i <= input; i++) {
-  for (let j = 0; j < i; j++) {
+for (let i = 0; i < input; i++) {
+  for (let j = 0; j <= i; j++) {
     star += "*";
   }
   star += "\n";
 }
 
-console.log(star.trim());
+console.log(star);
