@@ -4,7 +4,7 @@ const input = require("fs")
   .trim()
   .split("\n");
 
-const score = input[1].split(" ").map((num) => Number(num));
+const score = input[1].split(" ");
 const maxScore = Math.max(...score);
 let newScore = [];
 
