@@ -6,15 +6,10 @@ const input = require("fs")
 
 const score = input[1].split(" ");
 const maxScore = Math.max(...score);
-let newScore = [];
+let sum = 0;
 
 for (let i = 0; i < score.length; i++) {
-  newScore.push((score[i] / maxScore) * 100);
+  sum += (score[i] / maxScore) * 100;
 }
 
-const result = newScore.reduce(function add(sum, currValue) {
-  return sum + currValue;
-}, 0);
-
-const average = result / newScore.length;
-console.log(average);
+console.log(sum / score.length);
